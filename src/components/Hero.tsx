@@ -1,5 +1,6 @@
 import { ArrowRight, Github, Linkedin, Mail, FileDown } from "lucide-react";
-import heroImg from "@/assets/nikitha-hero.jpg";
+import heroAsset from "@/assets/nikitha-profile.jpg.asset.json";
+const heroImg = heroAsset.url;
 
 const stats = [
   { value: "8.5", label: "CGPA / 10" },
@@ -62,8 +63,8 @@ export function Hero() {
         </div>
 
         <div className="relative animate-fade-up [animation-delay:120ms]">
-          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-hero blur-2xl opacity-60" />
-          <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-[2rem] border border-border bg-card shadow-elegant">
+          <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-hero blur-2xl opacity-60" />
+          <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-2xl border border-border bg-card shadow-elegant">
             <img
               src={heroImg}
               alt="Chandavena Nikitha"
