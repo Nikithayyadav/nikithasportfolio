@@ -1,4 +1,5 @@
-import { ArrowRight, Github, Linkedin, Mail, FileDown } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Github, Linkedin, Mail, FileDown, X, Download } from "lucide-react";
 import heroAsset from "@/assets/nikitha-profile.jpg.asset.json";
 import resumeAsset from "@/assets/nikitha-resume.pdf.asset.json";
 const heroImg = heroAsset.url;
@@ -11,6 +12,7 @@ const stats = [
 ];
 
 export function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
   return (
     <section id="home" className="relative overflow-hidden pt-32 pb-20">
       {/* decorative blobs */}
@@ -42,14 +44,13 @@ export function Hero() {
             >
               Contact Me <ArrowRight className="h-4 w-4" />
             </a>
-            <a
-              href={resumeAsset.url}
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={() => setResumeOpen(true)}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition-smooth hover:bg-muted"
             >
               <FileDown className="h-4 w-4" /> View Resume
-            </a>
+            </button>
           </div>
 
           <div className="mt-6 flex items-center gap-3 text-muted-foreground">
