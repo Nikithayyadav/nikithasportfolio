@@ -44,12 +44,11 @@ export function Hero() {
             </a>
             <a
               href={resumeAsset.url}
-              download="Chandavena-Nikitha-Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition-smooth hover:bg-muted"
             >
-              <FileDown className="h-4 w-4" /> Resume
+              <FileDown className="h-4 w-4" /> View Resume
             </a>
           </div>
 
