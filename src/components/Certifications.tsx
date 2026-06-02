@@ -2,7 +2,7 @@ import { Section, SectionHeader } from "./Section";
 import { Award } from "lucide-react";
 
 const certs = [
-  { issuer: "SWECHA VISWAM IIITH", title: "Industry Skills Certification" },
+  { issuer: "SWECHA VISWAM IIITH", title: "AI intern Certification" },
   { issuer: "IBM SkillsBuild", title: "Professional Skills Track" },
   { issuer: "EY Skills", title: "Future Skills Program" },
   { issuer: "Microsoft Learn", title: "Microsoft Learning Programs" },
