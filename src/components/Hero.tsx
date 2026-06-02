@@ -1,4 +1,5 @@
-import { ArrowRight, Github, Linkedin, Mail, FileDown } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Github, Linkedin, Mail, FileDown, X, Download } from "lucide-react";
 import heroAsset from "@/assets/nikitha-profile.jpg.asset.json";
 import resumeAsset from "@/assets/nikitha-resume.pdf.asset.json";
 const heroImg = heroAsset.url;
@@ -11,6 +12,7 @@ const stats = [
 ];
 
 export function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
   return (
     <section id="home" className="relative overflow-hidden pt-32 pb-20">
       {/* decorative blobs */}
@@ -42,14 +44,13 @@ export function Hero() {
             >
               Contact Me <ArrowRight className="h-4 w-4" />
             </a>
-            <a
-              href={resumeAsset.url}
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={() => setResumeOpen(true)}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition-smooth hover:bg-muted"
             >
               <FileDown className="h-4 w-4" /> View Resume
-            </a>
+            </button>
           </div>
 
           <div className="mt-6 flex items-center gap-3 text-muted-foreground">
@@ -95,6 +96,44 @@ export function Hero() {
           </div>
         ))}
       </div>
+
+      {resumeOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm animate-fade-up"
+          onClick={() => setResumeOpen(false)}
+        >
+          <div
+            className="relative flex h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-glow"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-border px-4 py-3">
+              <h3 className="font-display text-base font-semibold">Resume — Chandavena Nikitha</h3>
+              <div className="flex items-center gap-2">
+                <a
+                  href={resumeAsset.url}
+                  download="Chandavena-Nikitha-Resume.pdf"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-semibold transition-smooth hover:bg-muted"
+                >
+                  <Download className="h-3.5 w-3.5" /> Download
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setResumeOpen(false)}
+                  className="rounded-full p-2 transition-smooth hover:bg-muted"
+                  aria-label="Close"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+            <iframe
+              src={resumeAsset.url}
+              title="Resume"
+              className="h-full w-full flex-1 bg-background"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
