@@ -39,15 +39,20 @@ export function Contact() {
         </div>
 
         <form
-          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+          action="https://formsubmit.co/chandavenanikitha9@gmail.com"
+          method="POST"
+          onSubmit={() => setSent(true)}
           className="rounded-3xl border border-border bg-card p-6 shadow-elegant"
         >
+          <input type="hidden" name="_subject" value="New portfolio contact message" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
           <h3 className="font-display text-xl font-bold">Send a message</h3>
           <p className="mt-1 text-sm text-muted-foreground">I usually respond within 24 hours.</p>
           <div className="mt-5 space-y-4">
-            <input required placeholder="Your name" className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-smooth focus:border-ring focus:ring-2 focus:ring-ring/30" />
-            <input required type="email" placeholder="Email" className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-smooth focus:border-ring focus:ring-2 focus:ring-ring/30" />
-            <textarea required rows={4} placeholder="Tell me about the opportunity..." className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-smooth focus:border-ring focus:ring-2 focus:ring-ring/30" />
+            <input required name="name" placeholder="Your name" className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-smooth focus:border-ring focus:ring-2 focus:ring-ring/30" />
+            <input required type="email" name="email" placeholder="Email" className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-smooth focus:border-ring focus:ring-2 focus:ring-ring/30" />
+            <textarea required name="message" rows={4} placeholder="Tell me about the opportunity..." className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-smooth focus:border-ring focus:ring-2 focus:ring-ring/30" />
             <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-accent px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-smooth hover:scale-[1.01]">
               {sent ? "Thanks! I'll be in touch." : (<>Send Message <Send className="h-4 w-4" /></>)}
             </button>
