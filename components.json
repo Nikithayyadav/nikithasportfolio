@@ -7,7 +7,7 @@
     "css": "src/styles.css",
     "baseColor": "slate",
     "cssVariables": true,
-    "prefix": ""
+    "prefix": "" 
   },
   "iconLibrary": "lucide",
   "rtl": false,
