@@ -2,7 +2,10 @@ import { useState } from "react";
 import { ArrowRight, Github, Linkedin, Mail, FileDown, X, Download } from "lucide-react";
 import heroAsset from "@/assets/nikitha-profile.jpg.asset.json";
 import resumeAsset from "@/assets/nikitha-resume.pdf.asset.json";
+import resumePageOneAsset from "@/assets/nikitha-resume-page-1.png.asset.json";
+import resumePageTwoAsset from "@/assets/nikitha-resume-page-2.png.asset.json";
 const heroImg = heroAsset.url;
+const resumePages = [resumePageOneAsset.url, resumePageTwoAsset.url];
 
 const stats = [
   { value: "8.5", label: "CGPA / 10" },
@@ -126,11 +129,21 @@ export function Hero() {
                 </button>
               </div>
             </div>
-            <iframe
-              src={resumeAsset.url}
-              title="Resume"
-              className="h-full w-full flex-1 bg-background"
-            />
+            <div className="flex-1 overflow-y-auto bg-muted/30 p-3 sm:p-6">
+              <div className="mx-auto flex max-w-3xl flex-col gap-4">
+                {resumePages.map((pageUrl, index) => (
+                  <img
+                    key={pageUrl}
+                    src={pageUrl}
+                    alt={`Resume page ${index + 1}`}
+                    width={1323}
+                    height={1871}
+                    className="w-full rounded-lg border border-border bg-card shadow-elegant"
+                    loading={index === 0 ? "eager" : "lazy"}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
