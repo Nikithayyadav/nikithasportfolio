@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Section, SectionHeader } from "./Section";
-import { Mail, Phone, MapPin, Github, Linkedin, Code2, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Code2, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const channels = [
   { icon: Mail, label: "Email", value: "CHANDAVENANIKITHA9@GMAIL.COM", href: "mailto:CHANDAVENANIKITHA9@GMAIL.COM" },
