@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my education, internships, tec
 
 ## 🚀 Live Website
 
-**Portfolio:** https://nikithasportfolio.lovable.app
+**Portfolio:** https://nikithasportfolio.lovable.app 
 
 ---
 
