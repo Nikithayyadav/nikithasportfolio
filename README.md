@@ -6,6 +6,10 @@ A modern, responsive portfolio website showcasing my education, internships, tec
 
 **Portfolio:** https://nikithasportfolio.lovable.app 
 
+## Portfolio Preview
+
+![Portfolio Preview](assets/portfolio-preview.png)
+
 ---
 
 ## 👩‍💻 About Me  
