@@ -36,7 +36,7 @@ I am passionate about software development, artificial intelligence, cloud techn
 
 ## 🎓 Education
 
-**B.Tech – Computer Science & Engineering (Artificial Intelligence)**
+**B.Tech – Computer Science & Engineering (Artificial Intelligence)** 
 ICFAI University, Hyderabad
 2023 – 2027
 CGPA: 8.5 / 10
