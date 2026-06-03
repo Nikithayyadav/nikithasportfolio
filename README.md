@@ -8,7 +8,7 @@ A modern, responsive portfolio website showcasing my education, internships, tec
 
 ---
 
-## 👩‍💻 About Me 
+## 👩‍💻 About Me  
 
 Hi, I'm **Chandavena Nikitha**, a B.Tech Computer Science & Engineering (Artificial Intelligence) student at **ICFAI University, Hyderabad**.
 
