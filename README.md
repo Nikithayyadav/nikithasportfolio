@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my education, internships, technical skills, projects, certifications, and career aspirations as a Computer Science & Engineering (AI) student.
 
-## 🚀 Live Website 
+## 🚀 Live Website  
 
 **Portfolio:** https://nikithasportfolio.lovable.app 
 
